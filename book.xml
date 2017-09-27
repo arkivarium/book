@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book>
   <article>
-    <title>Preservation of Data</title>
+    <title>Long Term Preservation of Archive Data in Noark 5</title>
     <section>
       <list>
 	<item>Understand Level (gui)</item>
@@ -12,30 +12,18 @@
   </article>
   <article>
     <section>
-      <title>MVC - Separation of Data and Structure</title>
+      <title>MVC Separation of Data and Structure</title>
     </section>
   </article>
   <article>
     <section>
-      <title>Structure of XML</title>
+      <title>XML Structure of Noark 5 Extracts</title>
     </section>
     <section>
       <title>XML</title>
     </section>
     <section>
       <title>XSD</title>
-    </section>
-    <section>
-      <title>DTD</title>
-    </section>
-    <section>
-      <title>XPath</title>
-    </section>
-    <section>
-      <title>XQuery</title>
-    </section>
-    <section>
-      <title>XLST</title>
     </section>
   </article>
 </book>
