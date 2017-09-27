@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+  <article>
+  	<title>Preservation of Data</title>
+	<section>
+		<list>
+			<item>Understand Level (gui)</item>
+			<item>Read Level (xml)</item>
+			<item>Storage Level (sda)</item>
+		</list>
+	</section>
+  </article>
+  <article>
+    <section>
+      <title>MVC - Separation of Data and Structure</title>
+    </section>
+  </article>
+  <article>
+    <section>
+      <title>Structure of XML</title>
+    </section>
+    <section>
+      <title>XML</title>
+    </section>
+    <section>
+      <title>XSD</title>
+    </section>
+    <section>
+      <title>DTD</title>
+    </section>
+    <section>
+      <title>XPath</title>
+    </section>
+    <section>
+      <title>XQuery</title>
+    </section>
+    <section>
+      <title>XLST</title>
+    </section>
+  </article>
+</book>
