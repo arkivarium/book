@@ -13,6 +13,7 @@
   <article>
     <section>
       <title>MVC Separation of Data and Structure</title>
+      <p>Model View Controller is a concept conceived by Trygve Reenskaug at Xerox PARC in 1978.  The note defines four terms: Model, View, Controller and Editor.</p>
     </section>
   </article>
   <article>
