@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book>
   <article>
-  	<title>Preservation of Data</title>
-	<section>
-		<list>
-			<item>Understand Level (gui)</item>
-			<item>Read Level (xml)</item>
-			<item>Storage Level (sda)</item>
-		</list>
-	</section>
+    <title>Preservation of Data</title>
+    <section>
+      <list>
+	<item>Understand Level (gui)</item>
+	<item>Read Level (xml)</item>
+	<item>Storage Level (sda)</item>
+      </list>
+    </section>
   </article>
   <article>
     <section>
