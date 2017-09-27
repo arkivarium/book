@@ -1,83 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<book>
-  <article>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <chapter>
     <title>Long Term Preservation of Archival Data in Noark 5</title>
-    <section>
-      <list>
-	<item>Understand Level (gui)</item>
-	<item>Read Level (xml)</item>
-	<item>Storage Level (sda)</item>
-      </list>
-    </section>
-  </article>
-  <article>
+    <para>The ultimate goal of Noark 5 standardization of archival data is longterm preservation and readable storage.</para>
+    <list>
+      <item>Understand Level (gui)</item>
+      <item>Read Level (xml)</item>
+      <item>Storage Level (sda)</item>
+    </list>
+  </chapter>
+  <chapter>
     <title>Problems</title>
-    <section>
-      <list>
-	<item>Government bodies such as Arkivverket publish archive standards.</item>
-	<item>Vendors write scripts that sometimes are incompliant with standards.</item>
-      </list>
-    </section>
-  </article>
-  <article>
+    <para>The following problems occur in the public and private sector.</para>
+    <list>
+      <item>Government bodies such as Arkivverket publish archive standards.</item>
+      <item>Vendors write scripts that sometimes are incompliant with standards.</item>
+    </list>
+  </chapter>
+  <chapter>
     <title>Standard</title>
-    <section>
-      <p>The switch from DTD to XSD in Noark 4 to Noark 5 made the standard stronger, but still requires correct JSON parsing of endpoints and implementation of the formal standard.</p>
-    </section>
-  </article>
-  <article>
+    <para>The switch from DTD in Noark 4 to XSD in Noark 5 made the standard stronger, but still requires correct parsing of endpoints and implementation of the formal standard.</para>
+  </chapter>
+  <chapter>
     <title>Audience</title>
-    <section>
-      <p>Document Controllers and Record Keepers can point at Noark 5 for best practise.</p>
-    </section>
-  </article>
-  <article>
+    <para>Document Controllers and Record Keepers can point at Noark 5 for best practise.</para>
+  </chapter>
+  <chapter>
     <title>Separation of Data and Structure with MVC</title>
-    <section>
-      <p>Model View Controller is a concept conceived by Trygve Reenskaug at Xerox PARC in a note on MVC in 1978.</p>
-      <p>The MVC note defines 4 terms: Model, View, Controller and Editor.</p>
-    </section>
-  </article>
-  <article>
+    <para>Model View Controller is a concept conceived by Trygve Reenskaug at Xerox PARC in a note on MVC in 1978.</para>
+    <para>The MVC note defines 4 terms: Model, View, Controller and Editor.</para>
+  </chapter>
+  <chapter>
     <title>Formal Structure of Noark 5 Extractions</title>
-    <section>
-      <list>
-	<item>addml.xsd</item>
-	<item>arkivstruktur.xml</item>
-	<item>arkivstruktur.xsd</item>
-	<item>arkivuttrekk.xml</item>
-	<item>endringslogg.xml</item>
-	<item>endringslogg.xsd</item>
-	<item>loependeJournal.xml</item>
-	<item>loependeJournal.xsd</item>
-	<item>metadatakatalog.xsd</item>
-	<item>offentligJournal.xml</item>
-	<item>offentligJournal.xsd</item>
-      </list>
-    </section>
-  </article>
-  <article>
+    <para>The Noark 5 standard defines the following files:</para>
+    <list>
+      <item>addml.xsd</item>
+      <item>arkivstruktur.xml</item>
+      <item>arkivstruktur.xsd</item>
+      <item>arkivuttrekk.xml</item>
+      <item>endringslogg.xml</item>
+      <item>endringslogg.xsd</item>
+      <item>loependeJournal.xml</item>
+      <item>loependeJournal.xsd</item>
+      <item>metadatakatalog.xsd</item>
+      <item>offentligJournal.xml</item>
+      <item>offentligJournal.xsd</item>
+    </list>
+  </chapter>
+  <chapter>
     <title>Examples of Noark 5 Extractions</title>
-    <section>
-      <list>
-	<item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/loependeJournal.xml</item>
-	<item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/offentligJournal.xml</item>
-	<item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/endringslogg.xml</item>
-	<item>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivstruktur.xml</item>
-	<item>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/0.2.0-add-samples/valid-mixed-archive/extraction/arkivstruktur.xml</item>
-	<item>https://raw.githubusercontent.com/SesamResearch/Records-Management-and-Archive-Systems-Research/master/samples/arkivstruktur.xml</item>
-      </list>
-    </section>
-  </article>
-  <article>
+    <para>Below are some examples of Noark 5 Extractions</para>
+    <list>
+      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/loependeJournal.xml</item>
+      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/offentligJournal.xml</item>
+      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/endringslogg.xml</item>
+      <item>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivstruktur.xml</item>
+      <item>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/0.2.0-add-samples/valid-mixed-archive/extraction/arkivstruktur.xml</item>
+      <item>https://raw.githubusercontent.com/SesamResearch/Records-Management-and-Archive-Systems-Research/master/samples/arkivstruktur.xml</item>
+    </list>
+  </chapter>
+  <chapter>
     <title>Free Implementation of Noark 5 Core</title>
-    <section>
-      <p>Thomas Sødring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core called Nikita.</p>
-      <list>
-	<item>https://github.com/HiOA-ABI/nikita-noark5-core</item>
-	<item>https://lists.nuug.no/mailman/listinfo/nikita-noark</item>
-	<item>https://github.com/HiOA-ABI/nikita-noark5-core/issues</item>
-      </list>
-    </section>
-  </article>
+    <para>Thomas Sødring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core called Nikita.</para>
+    <list>
+      <item>https://github.com/HiOA-ABI/nikita-noark5-core</item>
+      <item>https://lists.nuug.no/mailman/listinfo/nikita-noark</item>
+      <item>https://github.com/HiOA-ABI/nikita-noark5-core/issues</item>
+    </list>
+  </chapter>
 </book>
