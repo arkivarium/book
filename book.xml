@@ -108,7 +108,7 @@
   </chapter>
   <chapter>
     <title>Free Implementation of Noark 5 Core</title>
-    <para>Thomas S&#248;dring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core.</para>
+    <para>Thomas S&#248;dring at HiOA with assistance from Petter Reinholdtsen at UiO implements a free Noark 5 Core.</para>
     <orderedlist>
       <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core</para></listitem>
       <listitem><para>https://lists.nuug.no/mailman/listinfo/nikita-noark</para></listitem>
