@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<book version="5.0" xmlns="http://docbook.org/ns/docbook"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:xi="http://www.w3.org/2001/XInclude"
-      xmlns:svg="http://www.w3.org/2000/svg"
-      xmlns:m="http://www.w3.org/1998/Math/MathML"
-      xmlns:html="http://www.w3.org/1999/xhtml"
-      xmlns:db="http://docbook.org/ns/docbook">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook" version="5.0">
   <chapter>
     <title>Long Term Preservation of Archival Data in Noark 5</title>
     <para>The ultimate goal of Noark 5 standardization of archival data is longterm preservation and readable storage.</para>
-    <list>
-      <item>Understand Level (gui)</item>
-      <item>Read Level (xml)</item>
-      <item>Storage Level (sda)</item>
-    </list>
+    <itemizedlist>
+      <listitem><para>Understand Level (gui)</para></listitem>
+      <listitem><para>Read Level (xml)</para></listitem>
+      <listitem><para>Storage Level (sda)</para></listitem>
+    </itemizedlist>
   </chapter>
   <chapter>
     <title>Problems</title>
-    <para>The following problems occur in the public and private sector.</para>
-    <list>
-      <item>Government bodies such as Arkivverket publish archive standards.</item>
-      <item>Vendors write scripts that sometimes are incompliant with standards.</item>
-    </list>
+    <para>The following problems sometimes occur:</para>
+    <itemizedlist>
+      <listitem><para>Government bodies such as Arkivverket publish archive standards such as Noark 5.</para></listitem>
+      <listitem><para>Vendors write scripts that sometimes are incompliant with standards and incompatible software and programming languages.</para></listitem>
+    </itemizedlist>
   </chapter>
   <chapter>
-    <title>Standard</title>
+    <title>The Noark 5 Standard</title>
     <para>The switch from DTD in Noark 4 to XSD in Noark 5 made the standard stronger, but still requires correct parsing of endpoints and implementation of the formal standard.</para>
+    <para>With Noark 5 large parts of the standard was tidyed up.</para>
   </chapter>
   <chapter>
     <title>Audience</title>
@@ -38,40 +33,112 @@
   </chapter>
   <chapter>
     <title>Formal Structure of Noark 5 Extractions</title>
-    <para>The Noark 5 standard defines the following files:</para>
-    <list>
-      <item>addml.xsd</item>
-      <item>arkivstruktur.xml</item>
-      <item>arkivstruktur.xsd</item>
-      <item>arkivuttrekk.xml</item>
-      <item>endringslogg.xml</item>
-      <item>endringslogg.xsd</item>
-      <item>loependeJournal.xml</item>
-      <item>loependeJournal.xsd</item>
-      <item>metadatakatalog.xsd</item>
-      <item>offentligJournal.xml</item>
-      <item>offentligJournal.xsd</item>
-    </list>
+    <para>A Noark 5 Extraction</para>
+    <para>The Noark 5 standard defines the following extraction files in section 5.12:</para>
+    <itemizedlist>
+      <listitem><para>addml.xsd</para><para>https://www.arkivverket.no/forvaltning-og-utvikling/regelverk-og-standarder/andre-arkivstandarder/addml-archival-data-description-markup-language</para></listitem>
+      <listitem><para>arkivstruktur.xml</para></listitem>
+      <listitem><para>http://edu.hioa.no/ark2200/h17/resources/xsd-noark5/arkivstruktur.xsd</para></listitem>
+      <listitem><para>arkivuttrekk.xml</para></listitem>
+      <listitem><para>endringslogg.xml</para></listitem>
+      <listitem><para>endringslogg.xsd</para></listitem>
+      <listitem><para>loependeJournal.xml</para></listitem>
+      <listitem><para>loependeJournal.xsd</para></listitem>
+      <listitem><para>metadatakatalog.xsd</para></listitem>
+      <listitem><para>offentligJournal.xml</para></listitem>
+      <listitem><para>offentligJournal.xsd</para></listitem>
+    </itemizedlist>
+    <para>The folder dokumenter/ contains the specific documents.</para>
+  </chapter>
+  <chapter>
+  <title>ADDML (Archival Data Description Markup Language)</title>
+  <para>https://github.com/arkivverket/schemas/blob/master/ADDML/v8.3/addml.xsd</para>
+  </chapter>
+  <chapter>
+<title/>
   </chapter>
   <chapter>
     <title>Examples of Noark 5 Extractions</title>
-    <para>Below are some examples of Noark 5 Extractions</para>
-    <list>
-      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/loependeJournal.xml</item>
-      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/offentligJournal.xml</item>
-      <item>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/endringslogg.xml</item>
-      <item>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivstruktur.xml</item>
-      <item>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/0.2.0-add-samples/valid-mixed-archive/extraction/arkivstruktur.xml</item>
-      <item>https://raw.githubusercontent.com/SesamResearch/Records-Management-and-Archive-Systems-Research/master/samples/arkivstruktur.xml</item>
-    </list>
+    <para>Below are some examples of Noark 5 Extractions defined in the Noark 5 standard in section 5.12.</para>
+    <para>https://github.com/arkivverket/arkade5/</para>
+    <orderedlist>
+      <listitem><para>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/addml.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivstruktur.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivstruktur.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/arkivuttrekk.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/arkivverket/arkade5/master/src/Arkivverket.Arkade.Test/TestData/Noark5/ContentClassificationSystem/metadatakatalog.xsd</para></listitem>
+    </orderedlist>
+    <para>https://github.com/KDRS-SA/noark5-validator/</para>
+    <orderedlist>
+      <listitem><para>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/loependeJournal.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/offentligJournal.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/KDRS-SA/noark5-validator/master/src/resources/test-uttrekk/uttrekk1/n5uttrekk/endringslogg.xml</para></listitem>
+      </orderedlist>
+    <para>https://github.com/documaster/noark-extraction-validator-samples/tree/master/0.2.0/valid-case-archive/extraction</para>
+    <orderedlist>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/addml.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/arkivstruktur.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/arkivstruktur.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/arkivuttrekk.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/business-specific.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/endringslogg.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/loependeJournal.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/loependeJournal.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/metadatakatalog.xsd</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/offentligJournal.xml</para></listitem>
+      <listitem><para>https://raw.githubusercontent.com/documaster/noark-extraction-validator-samples/master/0.2.0/valid-case-archive/extraction/offentligJournal.xsd</para></listitem>
+    </orderedlist>
+    <para>https://github.com/SesamResearch/Records-Management-and-Archive-Systems-Research/</para>
+    <orderedlist>
+      <listitem><para>https://raw.githubusercontent.com/SesamResearch/Records-Management-and-Archive-Systems-Research/master/samples/arkivstruktur.xml</para></listitem>
+    </orderedlist>
+    <para>Innleveringspakke (SIP)</para>
+    <orderedlist><para>http://www.kdrs.no/prosjekt/Dokumenter/Krav/SIP.html</para></orderedlist>
   </chapter>
   <chapter>
     <title>Free Implementation of Noark 5 Core</title>
-    <para>Thomas Sødring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core called Nikita.</para>
-    <list>
-      <item>https://github.com/HiOA-ABI/nikita-noark5-core</item>
-      <item>https://lists.nuug.no/mailman/listinfo/nikita-noark</item>
-      <item>https://github.com/HiOA-ABI/nikita-noark5-core/issues</item>
-    </list>
+    <para>Thomas Sødring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core.</para>
+    <orderedlist>
+      <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core</para></listitem>
+      <listitem><para>https://lists.nuug.no/mailman/listinfo/nikita-noark</para></listitem>
+      <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core/issues</para></listitem>
+    </orderedlist>
+  </chapter>
+  <chapter>
+  <title>Defined Terms of the Noark 5 standard in Noark 5 Core as H2 Database tables.</title>
+  <para>The H2 Database Console is available on Noark5 Core servers at http://localhost:8082/</para>
+  <orderedlist>
+  <listitem><para/></listitem>
+  <listitem><para>Arkivdel SERIES</para></listitem>
+  <listitem><para>Arkiv FONDS</para></listitem>
+  <listitem><para>Arkivskaper FONDS_CREATOR</para></listitem>
+  <listitem><para>Avskrivning  SIGN_OFF</para></listitem>
+  <listitem><para>Basisregistrering BASIC_RECORD</para></listitem>
+  <listitem><para>Dokumentbeskrivelse DOCUMENT_DESCRIPTION</para></listitem>
+  <listitem><para>Dokumentflyt DOCUMENT_FLOW</para></listitem>
+ <listitem><para> Dokumentobjekt DOCUMENT_OBJECT</para></listitem>
+ <listitem><para> Gradering CLASSIFIED</para></listitem>
+  <listitem><para>Journalpost REGISTRY_ENTRY</para></listitem>
+  <listitem><para>Kassasjon DISPOSAL</para></listitem>
+  <listitem><para>Kassasjonsvedtak DISPOSAL_DECISION</para></listitem>
+  <listitem><para>Klasse CLASS</para></listitem>
+  <listitem><para>Klassifikasjonssystem CLASSIFICATION_SYSTEM</para></listitem>
+ <listitem><para> Kode CODE</para></listitem>
+  <listitem><para>Konvertering CONVERSION</para></listitem>
+ <listitem><para> Korrespondansepart CORRESPONDENCE_PART</para></listitem>
+  <listitem><para>Kryssreferanse CROSS_REFERENCE</para></listitem>
+  <listitem><para>Mappe FILE</para></listitem>
+  <listitem><para>Mappetype FILE_TYPE</para></listitem>
+<listitem><para>  Merknad COMMENT</para></listitem>
+  <listitem><para>Nøkkelord KEYWORD</para></listitem>
+ <listitem><para>Oppbevaringssted STORAGE_LOCATION</para></listitem>
+  <listitem><para>Presedens PRECEDENCE</para></listitem>
+  <listitem><para>Registrering RECORD</para></listitem>
+ <listitem><para> Saksmappe CASE_FILE</para></listitem>
+  <listitem><para>Sakspart CASE_PARTY</para></listitem>
+  <listitem><para>Skjerming SCREENING</para></listitem>
+  <listitem><para>Sletting DELETION</para></listitem>
+ <listitem><para> Tittel TITLE</para></listitem>
+  </orderedlist>
   </chapter>
 </book>
