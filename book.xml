@@ -37,8 +37,7 @@
     <para>The Noark 5 standard defines the following extraction files in section 5.12:</para>
     <itemizedlist>
       <listitem><para>addml.xsd</para><para>https://www.arkivverket.no/forvaltning-og-utvikling/regelverk-og-standarder/andre-arkivstandarder/addml-archival-data-description-markup-language</para></listitem>
-      <listitem><para>arkivstruktur.xml</para></listitem>
-      <listitem><para>http://edu.hioa.no/ark2200/h17/resources/xsd-noark5/arkivstruktur.xsd</para></listitem>
+      <listitem><para>arkivstruktur.xml</para><para>http://edu.hioa.no/ark2200/h17/resources/xsd-noark5/arkivstruktur.xsd</para></listitem>
       <listitem><para>arkivuttrekk.xml</para></listitem>
       <listitem><para>endringslogg.xml</para></listitem>
       <listitem><para>endringslogg.xsd</para></listitem>
