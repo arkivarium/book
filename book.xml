@@ -108,7 +108,7 @@
   </chapter>
   <chapter>
     <title>Free Implementation of Noark 5 Core</title>
-    <para>Thomas Sødring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core.</para>
+    <para>Thomas S&#248;dring at HiOA with assistance from Petter Reinholdtsen at UiO implements a Noark 5 Core.</para>
     <orderedlist>
       <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core</para></listitem>
       <listitem><para>https://lists.nuug.no/mailman/listinfo/nikita-noark</para></listitem>
@@ -116,40 +116,39 @@
     </orderedlist>
   </chapter>
   <chapter>
-  <title>Defined Terms of the Noark 5 standard in Noark 5 Core as H2 Database tables.</title>
-  <para>The H2 Database Console is available on Noark5 Core servers at http://localhost:8082/</para>
-  <orderedlist>
-  <listitem><para/></listitem>
-  <listitem><para>Arkivdel SERIES</para></listitem>
-  <listitem><para>Arkiv FONDS</para></listitem>
-  <listitem><para>Arkivskaper FONDS_CREATOR</para></listitem>
-  <listitem><para>Avskrivning  SIGN_OFF</para></listitem>
-  <listitem><para>Basisregistrering BASIC_RECORD</para></listitem>
-  <listitem><para>Dokumentbeskrivelse DOCUMENT_DESCRIPTION</para></listitem>
-  <listitem><para>Dokumentflyt DOCUMENT_FLOW</para></listitem>
- <listitem><para> Dokumentobjekt DOCUMENT_OBJECT</para></listitem>
- <listitem><para> Gradering CLASSIFIED</para></listitem>
-  <listitem><para>Journalpost REGISTRY_ENTRY</para></listitem>
-  <listitem><para>Kassasjon DISPOSAL</para></listitem>
-  <listitem><para>Kassasjonsvedtak DISPOSAL_DECISION</para></listitem>
-  <listitem><para>Klasse CLASS</para></listitem>
-  <listitem><para>Klassifikasjonssystem CLASSIFICATION_SYSTEM</para></listitem>
- <listitem><para> Kode CODE</para></listitem>
-  <listitem><para>Konvertering CONVERSION</para></listitem>
- <listitem><para> Korrespondansepart CORRESPONDENCE_PART</para></listitem>
-  <listitem><para>Kryssreferanse CROSS_REFERENCE</para></listitem>
-  <listitem><para>Mappe FILE</para></listitem>
-  <listitem><para>Mappetype FILE_TYPE</para></listitem>
-<listitem><para>  Merknad COMMENT</para></listitem>
-  <listitem><para>Nøkkelord KEYWORD</para></listitem>
- <listitem><para>Oppbevaringssted STORAGE_LOCATION</para></listitem>
-  <listitem><para>Presedens PRECEDENCE</para></listitem>
-  <listitem><para>Registrering RECORD</para></listitem>
- <listitem><para> Saksmappe CASE_FILE</para></listitem>
-  <listitem><para>Sakspart CASE_PARTY</para></listitem>
-  <listitem><para>Skjerming SCREENING</para></listitem>
-  <listitem><para>Sletting DELETION</para></listitem>
- <listitem><para> Tittel TITLE</para></listitem>
-  </orderedlist>
+    <title>Defined Terms of the Noark 5 standard in Noark 5 Core as H2 Database tables.</title>
+    <para>The H2 Database Console is available on Noark5 Core servers at http://localhost:8082/</para>
+    <orderedlist>
+      <listitem><para>Arkivdel SERIES</para></listitem>
+      <listitem><para>Arkiv FONDS</para></listitem>
+      <listitem><para>Arkivskaper FONDS_CREATOR</para></listitem>
+      <listitem><para>Avskrivning  SIGN_OFF</para></listitem>
+      <listitem><para>Basisregistrering BASIC_RECORD</para></listitem>
+      <listitem><para>Dokumentbeskrivelse DOCUMENT_DESCRIPTION</para></listitem>
+      <listitem><para>Dokumentflyt DOCUMENT_FLOW</para></listitem>
+      <listitem><para>Dokumentobjekt DOCUMENT_OBJECT</para></listitem>
+      <listitem><para>Gradering CLASSIFIED</para></listitem>
+      <listitem><para>Journalpost REGISTRY_ENTRY</para></listitem>
+      <listitem><para>Kassasjon DISPOSAL</para></listitem>
+      <listitem><para>Kassasjonsvedtak DISPOSAL_DECISION</para></listitem>
+      <listitem><para>Klasse CLASS</para></listitem>
+      <listitem><para>Klassifikasjonssystem CLASSIFICATION_SYSTEM</para></listitem>
+      <listitem><para>Kode CODE</para></listitem>
+      <listitem><para>Konvertering CONVERSION</para></listitem>
+      <listitem><para>Korrespondansepart CORRESPONDENCE_PART</para></listitem>
+      <listitem><para>Kryssreferanse CROSS_REFERENCE</para></listitem>
+      <listitem><para>Mappe FILE</para></listitem>
+      <listitem><para>Mappetype FILE_TYPE</para></listitem>
+      <listitem><para>Merknad COMMENT</para></listitem>
+      <listitem><para>N&#248;kkelord KEYWORD</para></listitem>
+      <listitem><para>Oppbevaringssted STORAGE_LOCATION</para></listitem>
+      <listitem><para>Presedens PRECEDENCE</para></listitem>
+      <listitem><para>Registrering RECORD</para></listitem>
+      <listitem><para>Saksmappe CASE_FILE</para></listitem>
+      <listitem><para>Sakspart CASE_PARTY</para></listitem>
+      <listitem><para>Skjerming SCREENING</para></listitem>
+      <listitem><para>Sletting DELETION</para></listitem>
+      <listitem><para>Tittel TITLE</para></listitem>
+    </orderedlist>
   </chapter>
 </book>
