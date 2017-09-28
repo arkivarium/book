@@ -116,8 +116,8 @@
     </orderedlist>
   </chapter>
   <chapter>
-    <title>Defined Terms of the Noark 5 standard in Noark 5 Core as H2 Database tables.</title>
-    <para>The H2 Database Console is available on Noark5 Core servers at http://localhost:8082/</para>
+    <title>Terms in the Noark 5 standard as H2 Database tables in Noark 5 Core</title>
+    <para>The H2 Database Console is available on Noark 5 Core servers at http://localhost:8082/</para>
     <orderedlist>
       <listitem><para>Arkivdel SERIES</para></listitem>
       <listitem><para>Arkiv FONDS</para></listitem>
