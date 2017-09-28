@@ -55,9 +55,6 @@
   <para>https://github.com/arkivverket/schemas/blob/master/ADDML/v8.3/addml.xsd</para>
   </chapter>
   <chapter>
-<title/>
-  </chapter>
-  <chapter>
     <title>Examples of Noark 5 Extractions</title>
     <para>Below are some examples of Noark 5 Extractions defined in the Noark 5 standard in section 5.12.</para>
     <para>https://github.com/arkivverket/arkade5/</para>
