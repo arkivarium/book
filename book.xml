@@ -20,7 +20,7 @@
   <chapter>
     <title>The Noark 5 Standard</title>
     <para>The switch from DTD in Noark 4 to XSD in Noark 5 made the standard stronger, but still requires correct parsing of endpoints and implementation of the formal standard.</para>
-    <para>With Noark 5 large parts of the standard was tidyed up.</para>
+    <para>With Noark 5 large parts of the standard was tidied up.</para>
   </chapter>
   <chapter>
     <title>Audience</title>
