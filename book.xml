@@ -115,6 +115,61 @@
     </orderedlist>
   </chapter>
   <chapter>
+    <title>HTTPD Configuration</title>
+    <para>Install Apache 2 and download the core from github.com in /var/www/html/</para>
+    <programlisting>
+      cd /var/www/html/
+      git clone https://github.com/HiOA-ABI/nikita-noark5-core
+    </programlisting>
+    <para>Configure Apache 2 in /etc/apache2/sites-available/000-default.conf</para>
+    <programlisting>
+      &lt;VirtualHost *:80&gt;
+      ServerAdmin webmaster@arkivarium.no
+      DocumentRoot /var/www/html/nikita-noark5-core/web/
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+      &lt;/VirtualHost&gt;
+
+      &lt;VirtualHost www.arkivarium.no:80&gt;
+      ServerName www.arkivarium.no
+      ServerAdmin webmaster@arkivarium.no
+      DocumentRoot /var/www/html/nikita-noark5-core/web/
+      ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.no-error.log
+      CustomLog ${APACHE_LOG_DIR}/www.arkivarium.no-access.log combined
+      &lt;/VirtualHost&gt;
+
+      &lt;VirtualHost arkivarium.no:80&gt;
+      ServerName arkivarium.no
+      ServerAdmin webmaster@arkivarium.no
+      DocumentRoot /var/www/html/nikita-noark5-core/web/
+      ErrorLog ${APACHE_LOG_DIR}/arkivarium.no-error.log
+      CustomLog ${APACHE_LOG_DIR}/arkivarium.no-access.log combined
+      RewriteEngine on
+      RewriteCond %{SERVER_NAME} =arkivarium.no
+      RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+      &lt;/VirtualHost&gt;
+
+      &lt;VirtualHost www.arkivarium.com:80&gt;
+      ServerName www.arkivarium.com
+      ServerAdmin webmaster@arkivarium.no
+      DocumentRoot /var/www/html/nikita-noark5-core/web/
+      ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.com-error.log
+      CustomLog ${APACHE_LOG_DIR}/www.arkivarium.com-access.log combined
+      &lt;/VirtualHost&gt;
+
+      &lt;VirtualHost arkivarium.com:80&gt;
+      ServerName www.arkivarium.com
+      ServerAdmin webmaster@arkivarium.no
+      DocumentRoot /var/www/html/nikita-noark5-core/web/
+      ErrorLog ${APACHE_LOG_DIR}/arkivarium.com-error.log
+      CustomLog ${APACHE_LOG_DIR}/arkivarium.com-access.log combined
+      &lt;/VirtualHost&gt;
+    </programlisting>
+    <para>Remember to replace {www.}arkivarium{.no,.com} with your own domain name.</para>
+    <para>Enable HTTPD configuration in /etc/apache2/sites-enabled/000-default.conf</para>
+    <para>Restart the HTTPD configuration with <code>service apache2 restart</code></para>
+  </chapter>
+  <chapter>
     <title>Terms in the Noark 5 standard as H2 Database tables in Noark 5 Core</title>
     <para>The H2 Database Console is available on Noark 5 Core servers at http://localhost:8082/</para>
     <orderedlist>
