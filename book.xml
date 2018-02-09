@@ -155,7 +155,7 @@ s    </programlisting>
   </chapter>
   <chapter>
     <title>Configuration of the free Noark 5 Core</title>
-    <para>Install maven and Java Development Kit</para>
+    <para>Install maven and Java 8 Development Kit</para>
     <programlisting>
       apt-get install maven
       apt-get install default-jdk openjdk-8-jdk openjdk-8-jre
