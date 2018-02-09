@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook" version="5.0">
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN"
+                      "http://docbook.org/xml/5.0/dtd/docbook.dtd">
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
   <chapter>
     <title>Long Term Preservation of Archival Data in Noark 5</title>
     <para>The ultimate goal of Noark 5 standardization of archival data is longterm preservation and readable storage.</para>
@@ -89,7 +91,7 @@
       <listitem><para>https://raw.githubusercontent.com/SesamResearch/Records-Management-and-Archive-Systems-Research/master/samples/arkivstruktur.xml</para></listitem>
     </orderedlist>
     <para>Innleveringspakke (SIP)</para>
-    <orderedlist><para>http://www.kdrs.no/prosjekt/Dokumenter/Krav/SIP.html</para></orderedlist>
+    <para>http://www.kdrs.no/prosjekt/Dokumenter/Krav/SIP.html</para>
     <para>The Noark 5 standard defines the following files:</para>
     <simplelist>
       <member>addml.xsd</member>
@@ -150,7 +152,7 @@ s    </programlisting>
     </programlisting>
     <para>Remember to replace the domain <code>arkivarium.com</code> and IP address <code>178.255.144.178</code> with the actual domain and IP address of your web server running Apache.</para>
     <para>Enable HTTPD configuration in <code>/etc/apache2/sites-enabled/000-default.conf</code></para>
-    <para>Download certbot-auto from <code>https://certbot.eff.org/</code> (see <a href="https://certbot.eff.org/#ubuntutyakkety-apache">https://certbot.eff.org/#ubuntutyakkety-apache</a> for instructions on Ubuntu 16.10) and run <code>certbot --apache -d arkivarium.com</code> (replace arkivarium.com with your domain).  Install the certificates for <code>arkivarium.com</code> and add a redirect to https in certbot.</para>
+    <para>Download certbot-auto from <code>https://certbot.eff.org/</code> and run <code>certbot --apache -d arkivarium.com</code> (replace arkivarium.com with your domain).  Install the certificates for <code>arkivarium.com</code> and add a redirect to https in certbot.</para>
     <para>Restart the HTTPD configuration with <code>service apache2 restart</code></para>
   </chapter>
   <chapter>
