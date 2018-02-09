@@ -221,7 +221,7 @@ s    </programlisting>
     <para>Edit <code>nikita-noark5-core/web/dependencies/internal/config.js</code> in a text editor
     such as vim, Emacs or gedit by locating the settings.</para>
     <programlisting>
-      vi /var/www/html/nikita-noark5-core/web/dependencies/internal/config.js</code>
+      <code>vi /var/www/html/nikita-noark5-core/web/dependencies/internal/config.js</code>
     </programlisting>
     <para>Modify the following:</para>
     <programlisting>
