@@ -242,10 +242,10 @@ nikitaOptions = {
     enabled: true
 };
     </programlisting>
-    <para>Install screen and nodejs</para>
+    <para>Install screen and node.js</para>
     <programlisting>
       apt-get install screen
-      apt-get install nodejs-legacy nodejs
+      apt-get install nodejs-legacy nodejs npm
     </programlisting>
     <para>Launch the free Noark 5 Core in a seprate terminal with <code>cd /var/www/html/nikita-noark5-core; screen make</code></para>
     <para>Launch the web Interface in a new terminal with <code>cd /var/www/html/nikita-noark5-core/web; screen make run</code></para>
