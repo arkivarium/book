@@ -242,8 +242,13 @@ nikitaOptions = {
     enabled: true
 };
     </programlisting>
-    <para>Launch the free Noark 5 Core in a seprate terminal with <code>cd nikita-noark5-core; make</code></para>
-    <para>Launch the web Interface in a new terminal with <code>cd nikita-noark5-core/web; make run</code></para>
+    <para>Install screen and nodejs</para>
+    <programlisting>
+      apt-get install screen
+      apt-get install nodejs-legacy nodejs
+    </programlisting>
+    <para>Launch the free Noark 5 Core in a seprate terminal with <code>cd /var/www/html/nikita-noark5-core; screen make</code></para>
+    <para>Launch the web Interface in a new terminal with <code>cd /var/www/html/nikita-noark5-core/web; screen make run</code></para>
   </chapter>
   <chapter>
     <title>Terms in the Noark 5 standard as H2 Database tables in Noark 5 Core</title>
