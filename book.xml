@@ -143,7 +143,7 @@
       RewriteCond %{SERVER_NAME} =arkivarium.com
       RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
       &lt;/VirtualHost&gt;
-s    </programlisting>
+    </programlisting>
     <para>Replace {www.}arkivarium.com with your own domain name and configure DNS settings.</para>
     <para>Add DNS records on the name servers for your domain to the IP address of your web server.</para>
     <programlisting>
