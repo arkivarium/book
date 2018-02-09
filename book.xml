@@ -167,7 +167,9 @@ s    </programlisting>
       cd nikita-noark5-core/
     </programlisting>
     <para>Edit <code>nikita-noark5-core/core-webapp/src/main/resources/application.yml</code> with a text editor such as vim, Emacs or gedit by locating the settings.</para>
-    <para>vi <code>/var/www/html/nikita-noark5-core/core-webapp/src/main/resources/application.yml</code></para>
+    <programlisting>
+      vi <code>/var/www/html/nikita-noark5-core/core-webapp/src/main/resources/application.yml</code>
+    </programlisting>
     <para>Modify the following and replace {www.}arkivarium.com with your domain name:</para>
     <programlisting>
 --- a/core-webapp/src/main/resources/application.yml
