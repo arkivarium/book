@@ -107,7 +107,7 @@
   </chapter>
   <chapter>
     <title>Free Implementation of Noark 5 Core</title>
-    <para>Thomas S&#248;dring at HiOA with assistance from Petter Reinholdtsen at UiO implements a free Noark 5 Core.</para>
+    <para>Thomas S&#248;dring at Oslo Metropolitan University with assistance from Petter Reinholdtsen at University of Oslo implements a free Noark 5 Core.</para>
     <orderedlist>
       <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core</para></listitem>
       <listitem><para>https://lists.nuug.no/mailman/listinfo/nikita-noark</para></listitem>
@@ -123,51 +123,117 @@
     </programlisting>
     <para>Configure Apache 2 in /etc/apache2/sites-available/000-default.conf</para>
     <programlisting>
-      &lt;VirtualHost *:80&gt;
-      ServerAdmin webmaster@arkivarium.no
-      DocumentRoot /var/www/html/nikita-noark5-core/web/
-      ErrorLog ${APACHE_LOG_DIR}/error.log
-      CustomLog ${APACHE_LOG_DIR}/access.log combined
-      &lt;/VirtualHost&gt;
-
-      &lt;VirtualHost www.arkivarium.no:80&gt;
-      ServerName www.arkivarium.no
-      ServerAdmin webmaster@arkivarium.no
-      DocumentRoot /var/www/html/nikita-noark5-core/web/
-      ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.no-error.log
-      CustomLog ${APACHE_LOG_DIR}/www.arkivarium.no-access.log combined
-      &lt;/VirtualHost&gt;
-
-      &lt;VirtualHost arkivarium.no:80&gt;
-      ServerName arkivarium.no
-      ServerAdmin webmaster@arkivarium.no
-      DocumentRoot /var/www/html/nikita-noark5-core/web/
-      ErrorLog ${APACHE_LOG_DIR}/arkivarium.no-error.log
-      CustomLog ${APACHE_LOG_DIR}/arkivarium.no-access.log combined
-      RewriteEngine on
-      RewriteCond %{SERVER_NAME} =arkivarium.no
-      RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
-      &lt;/VirtualHost&gt;
-
       &lt;VirtualHost www.arkivarium.com:80&gt;
       ServerName www.arkivarium.com
-      ServerAdmin webmaster@arkivarium.no
+      ServerAdmin webmaster@arkivarium.com
       DocumentRoot /var/www/html/nikita-noark5-core/web/
       ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.com-error.log
       CustomLog ${APACHE_LOG_DIR}/www.arkivarium.com-access.log combined
       &lt;/VirtualHost&gt;
 
       &lt;VirtualHost arkivarium.com:80&gt;
-      ServerName www.arkivarium.com
-      ServerAdmin webmaster@arkivarium.no
+      ServerName arkivarium.com
+      ServerAdmin webmaster@arkivarium.com
       DocumentRoot /var/www/html/nikita-noark5-core/web/
       ErrorLog ${APACHE_LOG_DIR}/arkivarium.com-error.log
       CustomLog ${APACHE_LOG_DIR}/arkivarium.com-access.log combined
+      RewriteEngine on
+      RewriteCond %{SERVER_NAME} =arkivarium.com
+      RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
       &lt;/VirtualHost&gt;
+s    </programlisting>
+    <para>Replace {www.}arkivarium.com with your own domain name and configure DNS settings.</para>
+    <para>Add DNS records on the name servers for your domain to the IP address of your web server.</para>
+    <programlisting>
+      arkivarium.com	A	178.255.144.178
+      www.arkivarium.com	A	178.255.144.178
     </programlisting>
-    <para>Remember to replace {www.}arkivarium{.no,.com} with your own domain name.</para>
-    <para>Enable HTTPD configuration in /etc/apache2/sites-enabled/000-default.conf</para>
+    <para>Remember to replace the domain <code>arkivarium.com</code> and IP address <code>178.255.144.178</code> with the actual domain and IP address of your web server running Apache.</para>
+    <para>Enable HTTPD configuration in <code>/etc/apache2/sites-enabled/000-default.conf</code></para>
+    <para>Download certbot-auto from <code>https://certbot.eff.org/</code> (see <a href="https://certbot.eff.org/#ubuntutyakkety-apache">https://certbot.eff.org/#ubuntutyakkety-apache</a> for instructions on Ubuntu 16.10) and run <code>certbot --apache -d arkivarium.com</code> (replace arkivarium.com with your domain).  Install the certificates for <code>arkivarium.com</code> and add a redirect to https in certbot.</para>
     <para>Restart the HTTPD configuration with <code>service apache2 restart</code></para>
+  </chapter>
+  <chapter>
+    <title>Configuration of the free Noark 5 Core</title>
+    <para>Download the free Noark 5 core from github.com</para>
+    <programlisting>
+      cd /var/www/html/
+      git clone https://github.com/HiOA-ABI/nikita-noark5-core
+    </programlisting>
+    <para>Edit <code>nikita-noark5-core/core-webapp/src/main/resources/application.yml</code> with a text editor such as vim, Emacs or gedit by locating the settings.</para>
+    <para>vi <code>/var/www/html/nikita-noark5-core/core-webapp/src/main/resources/application.yml</code></para>
+    <para>Modify the following and replace {www.}arkivarium.com with your domain name:</para>
+    <programlisting>
+--- a/core-webapp/src/main/resources/application.yml
++++ b/core-webapp/src/main/resources/application.yml
+@@ -38,7 +38,7 @@ info:
+     app.name: OsloMet Noark 5 Core (Demo mode)
+     build.version: ${project.version}
+ hateoas:
+-    publicAddress: http://localhost:8092/noark5v4
++    publicAddress: <code>http://www.arkivarium.com:8092/noark5v4</code>
+
+ jwt:
+   header: Authorization
+@@ -53,16 +53,16 @@ nikita-noark5-core:
+     pagination:
+       _maxPageSize: 10
+     mail:
+-        from: nikita@example.com
++        from: <code>webmaster@arkivarium.com</code>
+     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
+         jmx.enabled: true
+         spark:
+             enabled: false
+-            host: localhost
++            host: <code>www.arkivarium.com</code>
+             port: 9999
+         graphite:
+             enabled: false
+-            host: localhost
++            host: <code>www.arkivarium.com</code>
+             port: 2003
+             prefix: nikitaNoark5Core
+         logs: # report metrics in the logs
+@@ -73,7 +73,7 @@ nikita-noark5-core:
+             ROOT: DEBUG
+         logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
+             enabled: false
+-            host: localhost
++            host: <code>www.arkivarium.com</code>
+    </programlisting>
+  </chapter>
+  <chapter>
+    <title>Configuration of the Web Interface</title>
+    <para>Download the free Noark 5 core from github.com</para>
+    <programlisting>
+      <code>cd /var/www/html/</code>
+      <code>git clone https://github.com/HiOA-ABI/nikita-noark5-core</code>
+    </programlisting>
+    <para>Edit <code>nikita-noark5-core/web/dependencies/internal/config.js</code> in a text editor
+    such as vim, Emacs or gedit by locating the settings.</para>
+    <para><code>vi /var/www/html/nikita-noark5-core/web/dependencies/internal/config.js</code></para>
+    <para>Modify the following:</para>
+    <programlisting>
+nikitaOptions = {
+    baseUrl: '<code>http://localhost:8092/noark5v4/</code>',
+    guiBaseUrl: '<code>http://localhost:3000/</code>',
+    appUrl: '<code>http://localhost:8092/noark5v4/hateoas-api</code>',
+    fondsStructureRoot: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/</code>',
+    createFondsAddress: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkiv</code>',
+    createFondsCreatorAddress: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkivskaper</code>',
+    loginUrl: "<code>http://localhost:8092/noark5v4/auth</code>",
+    protocol: 'http',
+    appName: 'noark5v4',
+    apiName: 'hateoas-api',
+    authPoint: 'auth',
+    displayFooterNote: true,
+    displayBreadcrumb: true,
+    enabled: true
+};
+    </programlisting>
+    <para>Launch the free Noark 5 Core in a seprate terminal with <code>cd nikita-noark5-core; make</code></para>
+    <para>Launch the web Interface in a new terminal with <code>cd nikita-noark5-core/web; make run</code></para>
   </chapter>
   <chapter>
     <title>Terms in the Noark 5 standard as H2 Database tables in Noark 5 Core</title>
