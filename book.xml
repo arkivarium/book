@@ -153,6 +153,27 @@ s    </programlisting>
     <para>Remember to replace the domain <code>arkivarium.com</code> and IP address <code>178.255.144.178</code> with the actual domain and IP address of your web server running Apache.</para>
     <para>Enable HTTPD configuration in <code>/etc/apache2/sites-enabled/000-default.conf</code></para>
     <para>Download certbot-auto from <code>https://certbot.eff.org/</code> and run <code>certbot --apache -d arkivarium.com</code> (replace arkivarium.com with your domain).  Install the certificates for <code>arkivarium.com</code> and add a redirect to https in certbot.</para>
+    <para>Install the Apache 2 HTTP daemon and enable the modules ssl, proxy and proxy_http:</para>
+    <programlisting>
+      apt-get install apache2-bin
+      a2enmod ssl
+      a2enmod proxy
+      a2enmod proxy_http
+    </programlisting>
+    <para>Configure the Apache 2 HTTPD proxy and proxy_http module in <code>/etc/apache2/sites-available/000-noark5v4.conf</code> to access http://localhost:8092/noark5v4/ on http://arkivarium.com/noark5v4/ (replace the domain <code>arkivarium.com</code> with your own domain):</para>
+    <programlisting>
+      &lt;IfModule mod_proxy.c&gt;
+      &lt;Location /noark5v4&gt;
+      ProxyPass http://localhost:8092/noark5v4/
+      ProxyPassReverse http://localhost:8092/noark5v4/
+      &lt;/Location&gt;
+      &lt;/IfModule&gt;
+    </programlisting>
+    <para>Add a symbolic link from <code>/etc/apache2/sites-available/000-noark5v4.conf</code> to <code>/etc/apache2/sites-enabled/000-noark5v4.conf</code></para>
+    <programlisting>
+      <code>cd /etc/apache2/sites-enabled/</code>
+      <code>ln -s /etc/apache2/sites-available/000-noark5v4.conf</code>
+    </programlisting>
     <para>Restart the HTTPD configuration with <code>service apache2 restart</code></para>
   </chapter>
   <chapter>
