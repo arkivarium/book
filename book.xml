@@ -155,10 +155,16 @@ s    </programlisting>
   </chapter>
   <chapter>
     <title>Configuration of the free Noark 5 Core</title>
+    <para>Install maven and Java Development Kit</para>
+    <programlisting>
+      apt-get install maven
+      apt-get install default-jdk openjdk-8-jdk openjdk-8-jre
+    </programlisting>
     <para>Download the free Noark 5 core from github.com</para>
     <programlisting>
       cd /var/www/html/
       git clone https://github.com/HiOA-ABI/nikita-noark5-core
+      cd nikita-noark5-core/
     </programlisting>
     <para>Edit <code>nikita-noark5-core/core-webapp/src/main/resources/application.yml</code> with a text editor such as vim, Emacs or gedit by locating the settings.</para>
     <para>vi <code>/var/www/html/nikita-noark5-core/core-webapp/src/main/resources/application.yml</code></para>
@@ -205,10 +211,10 @@ s    </programlisting>
   </chapter>
   <chapter>
     <title>Configuration of the Web Interface</title>
-    <para>Download the free Noark 5 core from github.com</para>
+    <para>Read the previous chapter on how to download
+    and configure the Noark 5 core in /var/www/html/</para>
     <programlisting>
       <code>cd /var/www/html/</code>
-      <code>git clone https://github.com/HiOA-ABI/nikita-noark5-core</code>
     </programlisting>
     <para>Edit <code>nikita-noark5-core/web/dependencies/internal/config.js</code> in a text editor
     such as vim, Emacs or gedit by locating the settings.</para>
