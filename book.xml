@@ -242,6 +242,11 @@ nikitaOptions = {
     enabled: true
 };
     </programlisting>
+    <para>Install Debian-specific packages by running setup-debian</para>
+    <programlisting>
+      cd /var/www/html/nikita-noark5-core/web/
+      make setup-debian
+    </programlisting>
     <para>Install screen and node.js</para>
     <programlisting>
       apt-get install screen
