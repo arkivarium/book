@@ -145,7 +145,7 @@ s    </programlisting>
     <para>Replace {www.}arkivarium.com with your own domain name and configure DNS settings.</para>
     <para>Add DNS records on the name servers for your domain to the IP address of your web server.</para>
     <programlisting>
-      arkivarium.com	A	178.255.144.178
+      arkivarium.com		A	178.255.144.178
       www.arkivarium.com	A	178.255.144.178
     </programlisting>
     <para>Remember to replace the domain <code>arkivarium.com</code> and IP address <code>178.255.144.178</code> with the actual domain and IP address of your web server running Apache.</para>
