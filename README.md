@@ -1,3 +1,3 @@
 # book
-Apache2 / Noark5 Core Documentation
-http://arkivarium.com/book/book.pdf
+Apache2 HTTPD and Noark 5 Core Configuration
+http://arkivarium.no/book/book.pdf
