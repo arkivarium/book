@@ -125,34 +125,34 @@
     </programlisting>
     <para>Configure Apache 2 in /etc/apache2/sites-available/000-default.conf</para>
     <programlisting>
-      &lt;VirtualHost www.arkivarium.com:80&gt;
-      ServerName www.arkivarium.com
-      ServerAdmin webmaster@arkivarium.com
+      &lt;VirtualHost www.arkivarium.no:80&gt;
+      ServerName www.arkivarium.no
+      ServerAdmin webmaster@arkivarium.no
       DocumentRoot /var/www/html/nikita-noark5-core/web/
-      ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.com-error.log
-      CustomLog ${APACHE_LOG_DIR}/www.arkivarium.com-access.log combined
+      ErrorLog ${APACHE_LOG_DIR}/www.arkivarium.no-error.log
+      CustomLog ${APACHE_LOG_DIR}/www.arkivarium.no-access.log combined
       &lt;/VirtualHost&gt;
 
-      &lt;VirtualHost arkivarium.com:80&gt;
-      ServerName arkivarium.com
-      ServerAdmin webmaster@arkivarium.com
+      &lt;VirtualHost arkivarium.no:80&gt;
+      ServerName arkivarium.no
+      ServerAdmin webmaster@arkivarium.no
       DocumentRoot /var/www/html/nikita-noark5-core/web/
-      ErrorLog ${APACHE_LOG_DIR}/arkivarium.com-error.log
-      CustomLog ${APACHE_LOG_DIR}/arkivarium.com-access.log combined
+      ErrorLog ${APACHE_LOG_DIR}/arkivarium.no-error.log
+      CustomLog ${APACHE_LOG_DIR}/arkivarium.no-access.log combined
       RewriteEngine on
-      RewriteCond %{SERVER_NAME} =arkivarium.com
+      RewriteCond %{SERVER_NAME} =arkivarium.no
       RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
       &lt;/VirtualHost&gt;
     </programlisting>
-    <para>Replace {www.}arkivarium.com with your own domain name and configure DNS settings.</para>
+    <para>Replace {www.}arkivarium.no with your own domain name and configure DNS settings.</para>
     <para>Add DNS records on the name servers for your domain to the IP address of your web server.</para>
     <programlisting>
-      arkivarium.com		A	178.255.144.178
-      www.arkivarium.com	A	178.255.144.178
+      arkivarium.no		A	178.255.144.179
+      www.arkivarium.no	A	178.255.144.179
     </programlisting>
-    <para>Remember to replace the domain <code>arkivarium.com</code> and IP address <code>178.255.144.178</code> with the actual domain and IP address of your web server running Apache.</para>
+    <para>Remember to replace the domain <code>arkivarium.no</code> and IP address <code>178.255.144.179</code> with the actual domain and IP address of your web server running Apache.</para>
     <para>Enable HTTPD configuration in <code>/etc/apache2/sites-enabled/000-default.conf</code></para>
-    <para>Download certbot-auto from <code>https://certbot.eff.org/</code> and run <code>certbot --apache -d arkivarium.com</code> (replace arkivarium.com with your domain).  Install the certificates for <code>arkivarium.com</code> and add a redirect to https in certbot.</para>
+    <para>Download certbot-auto from <code>https://certbot.eff.org/</code> and run <code>certbot --apache -d arkivarium.no</code> (replace arkivarium.no with your domain).  Install the certificates for <code>arkivarium.no</code> and add a redirect to https in certbot.</para>
     <para>Install the Apache 2 HTTP daemon and enable the modules ssl, proxy and proxy_http:</para>
     <programlisting>
       apt-get install apache2-bin
@@ -160,7 +160,7 @@
       a2enmod proxy
       a2enmod proxy_http
     </programlisting>
-    <para>Configure the Apache 2 HTTPD proxy and proxy_http module in <code>/etc/apache2/sites-available/000-noark5v4.conf</code> to access http://localhost:8092/noark5v4/ on http://arkivarium.com/noark5v4/ (replace the domain <code>arkivarium.com</code> with your own domain):</para>
+    <para>Configure the Apache 2 HTTPD proxy and proxy_http module in <code>/etc/apache2/sites-available/000-noark5v4.conf</code> to access http://localhost:8092/noark5v4/ on http://arkivarium.no/noark5v4/ (replace the domain <code>arkivarium.no</code> with your own domain):</para>
     <programlisting>
       &lt;IfModule mod_proxy.c&gt;
       &lt;Location /noark5v4&gt;
@@ -193,7 +193,7 @@
     <programlisting>
       vi <code>/var/www/html/nikita-noark5-core/core-webapp/src/main/resources/application.yml</code>
     </programlisting>
-    <para>Modify the following and replace {www.}arkivarium.com with your domain name:</para>
+    <para>Modify the following and replace {www.}arkivarium.no with your domain name:</para>
     <programlisting>
 --- a/core-webapp/src/main/resources/application.yml
 +++ b/core-webapp/src/main/resources/application.yml
@@ -202,7 +202,7 @@
      build.version: ${project.version}
  hateoas:
 -    publicAddress: http://localhost:8092/noark5v4
-+    publicAddress: <code>http://www.arkivarium.com:8092/noark5v4</code>
++    publicAddress: <code>http://www.arkivarium.no:8092/noark5v4</code>
 
  jwt:
    header: Authorization
@@ -211,18 +211,18 @@
        _maxPageSize: 10
      mail:
 -        from: nikita@example.com
-+        from: <code>webmaster@arkivarium.com</code>
++        from: <code>webmaster@arkivarium.no</code>
      metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
          jmx.enabled: true
          spark:
              enabled: false
 -            host: localhost
-+            host: <code>www.arkivarium.com</code>
++            host: <code>www.arkivarium.no</code>
              port: 9999
          graphite:
              enabled: false
 -            host: localhost
-+            host: <code>www.arkivarium.com</code>
++            host: <code>www.arkivarium.no</code>
              port: 2003
              prefix: nikitaNoark5Core
          logs: # report metrics in the logs
@@ -231,7 +231,7 @@
          logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
              enabled: false
 -            host: localhost
-+            host: <code>www.arkivarium.com</code>
++            host: <code>www.arkivarium.no</code>
     </programlisting>
   </chapter>
   <chapter>
@@ -249,13 +249,13 @@
     <para>Modify the following:</para>
     <programlisting>
 nikitaOptions = {
-    baseUrl: '<code>http://localhost:8092/noark5v4/</code>',
-    guiBaseUrl: '<code>http://localhost:3000/</code>',
-    appUrl: '<code>http://localhost:8092/noark5v4/hateoas-api</code>',
-    fondsStructureRoot: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/</code>',
-    createFondsAddress: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkiv</code>',
-    createFondsCreatorAddress: '<code>http://localhost:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkivskaper</code>',
-    loginUrl: "<code>http://localhost:8092/noark5v4/auth</code>",
+    baseUrl: '<code>http://www.arkivarium.no:8092/noark5v4/</code>',
+    guiBaseUrl: '<code>http://www.arkivarium.no/</code>',
+    appUrl: '<code>http://arkivarium.no:8092/noark5v4/hateoas-api</code>',
+    fondsStructureRoot: '<code>http://www.arkivarium.no:8092/noark5v4/hateoas-api/arkivstruktur/</code>',
+    createFondsAddress: '<code>http://www.arkivarium.no:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkiv</code>',
+    createFondsCreatorAddress: '<code>http://www.arkivarium.no:8092/noark5v4/hateoas-api/arkivstruktur/ny-arkivskaper</code>',
+    loginUrl: "<code>http://www.arkivarium.no:8092/noark5v4/auth</code>",
     protocol: 'http',
     appName: 'noark5v4',
     apiName: 'hateoas-api',
@@ -275,7 +275,7 @@ nikitaOptions = {
       apt-get install screen
       apt-get install nodejs-legacy nodejs npm
     </programlisting>
-    <para>Launch the free Noark 5 Core in a seprate terminal with <code>cd /var/www/html/nikita-noark5-core; screen make</code></para>
+    <para>Launch the free Noark 5 Core in a separate terminal with <code>cd /var/www/html/nikita-noark5-core; screen make</code></para>
     <para>Launch the web Interface in a new terminal with <code>cd /var/www/html/nikita-noark5-core/web; screen make run</code></para>
   </chapter>
   <chapter>
