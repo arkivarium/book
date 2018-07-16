@@ -111,9 +111,9 @@
     <title>Free Implementation of Noark 5 Core</title>
     <para>Thomas S&#248;dring at Oslo Metropolitan University with assistance from Petter Reinholdtsen at University of Oslo implements a free Noark 5 Core.</para>
     <orderedlist>
-      <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core</para></listitem>
+      <listitem><para>https://gitlab.com/OsloMet-ABI/nikita-noark5-core</para></listitem>
       <listitem><para>https://lists.nuug.no/mailman/listinfo/nikita-noark</para></listitem>
-      <listitem><para>https://github.com/HiOA-ABI/nikita-noark5-core/issues</para></listitem>
+      <listitem><para>https://gitlab.com/OsloMet-ABI/nikita-noark5-core/issues</para></listitem>
     </orderedlist>
   </chapter>
   <chapter>
@@ -121,7 +121,7 @@
     <para>Install Apache 2 and download the core from github.com in /var/www/html/</para>
     <programlisting>
       cd /var/www/html/
-      git clone https://github.com/HiOA-ABI/nikita-noark5-core
+      git clone https://gitlab.com/OsloMet-ABI/nikita-noark5-core
     </programlisting>
     <para>Configure Apache 2 in /etc/apache2/sites-available/000-default.conf</para>
     <programlisting>
@@ -186,7 +186,7 @@
     <para>Download the free Noark 5 core from github.com</para>
     <programlisting>
       cd /var/www/html/
-      git clone https://github.com/HiOA-ABI/nikita-noark5-core
+      git clone https://gitlab.com/OsloMet-ABI/nikita-noark5-core
       cd nikita-noark5-core/
     </programlisting>
     <para>Edit <code>nikita-noark5-core/core-webapp/src/main/resources/application.yml</code> with a text editor such as vim, Emacs or gedit by locating the settings.</para>
